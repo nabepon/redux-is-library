@@ -3,6 +3,7 @@ const DECREMENT = 'DECREMENT';
 
 
 export const increment = (current) => {
+  console.log('increment', current);
   return {
     type: INCREMENT,
     payload: {
