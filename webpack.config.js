@@ -3,13 +3,14 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    javascript: ['./src/index.js'],
+    vendor: ['redux'],
+    bundle: ['./src/index.js'],
   },
 
   output: {
-    path: path.join(__dirname, 'dist'), // Must be an absolute path
-    filename: 'index.js',
-    publicPath: '/dist'
+    path: path.join(__dirname, 'dist/assets'), // Must be an absolute path
+    filename: '[name].js',
+    publicPath: '/assets'
   },
 
   module: {
@@ -18,7 +19,10 @@ module.exports = {
       loader: 'babel',
       include: [
         path.join(__dirname, 'src'),
-      ]
+      ],
+      exclude: [
+        /node_modules/,
+      ],
     }]
   },
 
@@ -38,6 +42,7 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', 2),
     new webpack.optimize.UglifyJsPlugin(),
   ]
 };

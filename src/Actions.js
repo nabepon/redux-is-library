@@ -1,9 +1,13 @@
+/*********************************
+ * 定数
+ *********************************/
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 
-
+/*********************************
+ * Actions
+ *********************************/
 export const increment = (current) => {
-  console.log('increment', current);
   return {
     type: INCREMENT,
     payload: {
@@ -21,10 +25,16 @@ export const decrement = (current) => {
   }
 };
 
+/*********************************
+ * 初期値
+ *********************************/
 const initialState = {
   count: 0
 };
 
+/*********************************
+ * reducer
+ *********************************/
 export default function reducer(state = initialState, { type, payload }) {
   switch (type) {
     case INCREMENT:

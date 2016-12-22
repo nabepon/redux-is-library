@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import ActionReducer from './Actions';
+import counter from './Actions';
 
 export default combineReducers({
-  ActionReducer,
+  counter,
 });

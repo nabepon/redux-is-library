@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "author": "Takaaki Watanabe",
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "build": "webpack --verbose --colors --display-error-details --config webpack.config.js"
   },
   "dependencies": {
     "redux": "3.6.0"
