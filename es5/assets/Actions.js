@@ -3,8 +3,8 @@ var Actions = (function(){
    * 定数
    * switch caseでtype判定するためのお作法
    ******************************************/
-  const INCREMENT = 'INCREMENT';
-  const DECREMENT = 'DECREMENT';
+  var INCREMENT = 'INCREMENT';
+  var DECREMENT = 'DECREMENT';
 
   /******************************************
    * Actions

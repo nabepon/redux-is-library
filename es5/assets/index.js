@@ -7,7 +7,7 @@ var App = (function(){
       this.el = document.querySelector('#app');
     },
     counterPage: function(){
-      const component = new Component(this.store);
+      var component = new Component(this.store);
       this.el.appendChild( component.mount() );
     }
   };

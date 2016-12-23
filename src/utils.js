@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 export function mapDispatchToActions(store, Actions){
   const dispatch = store.dispatch;
   const ret = {...Actions};
-  for(var i in ret){
+  for(const i in ret){
     ret[i] = bindActionCreators(ret[i], dispatch);
   }
   return ret;

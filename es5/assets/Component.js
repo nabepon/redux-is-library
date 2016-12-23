@@ -43,7 +43,7 @@ var Component = (function(){
      * mountのthis.el.addEventListenerで一括制御する
      */
     handler: function(e) {
-      const state = this.store.getState().counter;
+      var state = this.store.getState().counter;
       if(utils.hasClass(e, "js-increment")){
         this.actions.increment(state.count);
       }
@@ -61,7 +61,7 @@ var Component = (function(){
      * のような追加処理を書く
      */
     render() {
-      const state = this.store.getState().counter;
+      var state = this.store.getState().counter;
       this.el.innerHTML = '\
         <div>' + state.count + '</div>\
         <button class="js-increment">increment</button>\
