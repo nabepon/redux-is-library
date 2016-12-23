@@ -10,23 +10,23 @@ const DECREMENT = 'DECREMENT';
  * stateを変更する関数
  * typeとpayloadはお作法
  ******************************************/
-export const increment = (current) => {
+export function increment(current) {
   return {
     type: INCREMENT,
     payload: {
       count: current + 1
     },
   }
-};
+}
 
-export const decrement = (current) => {
+export function decrement(current) {
   return {
     type: DECREMENT,
     payload: {
       count: current - 1
     },
   }
-};
+}
 
 /******************************************
  * 初期値のお作法
